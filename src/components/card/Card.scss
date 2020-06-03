@@ -1,0 +1,319 @@
+@import "../../scss/variables";
+
+.card {
+    display: inline-flex;
+    flex-direction: column;
+    height: fit-content;
+    margin: .5rem;
+    width: 7.5rem;
+
+    &:active .card-image {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.171);
+    }
+
+    &-image {
+        height: 9rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $color--primery-black;
+        border-radius: 5px;
+        padding: .5rem;
+        transition: all .4s;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.171);
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &-name {
+        width: 100%;
+        padding: .3rem;
+        text-align: center;
+        font-weight: 500;
+    }
+}
+
+.selectedCard {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 100;
+    transition: all .4s;
+
+    &.deactive {
+        opacity: 0;
+        z-index: -100;
+        width: 0px;
+        height: 0px;
+        overflow: hidden;
+    }
+
+    &-blur {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        z-index: 101;
+        backdrop-filter: blur(10px);
+        transition: all .4s;
+    }
+
+    &-card {
+        z-index: 102;
+        width: 25rem;
+
+        &_container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1.75rem 1.5rem;
+            border-radius: 15px;
+            background-color: $color--primery-black;
+            box-shadow: 8px 8px 5px rgba($color--primery-black, .3);
+        }
+
+        &_des {
+            width: 60%;
+            min-width: 60%;
+            max-width: 60%;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        &_imageContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            width: 60%;
+            height: fit-content;
+            padding: 10px 0;
+            border-radius: 10px;
+        }
+
+        &_image {
+            width: 40%;
+            min-width: 40%;
+            max-width: 40%;
+            display: flex;
+            justify-content: flex-end;
+            height: 100%;
+            padding: .625rem 0 0 0;
+
+
+            img {
+                max-width: 100%;
+                max-height: 80px;
+            }
+        }
+
+        &_name {
+            width: 100%;
+            font-size: 1.5rem;
+            color: white;
+            min-width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-bottom: .25rem;
+
+        }
+
+        &_tagline {
+            width: 100%;
+            font-size: .75rem;
+            color: rgb(200, 200, 200);
+            padding: .5rem 0 0 0;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+        }
+
+        &_close {
+            width: fit-content;
+            font-size: .875rem;
+            font-weight: 800;
+            padding: 5px 8px;
+            margin-bottom: 5px;
+            border-radius: 10rem;
+            text-transform: uppercase;
+            background-color: $color--primery-red;
+            color: $color--primery-black;
+            user-select: none;
+            cursor: pointer;
+        }
+
+        &_add {
+            margin-left: auto;
+            margin-top: 1.5rem;
+            width: fit-content;
+            font-size: .875rem;
+            font-weight: 800;
+            padding: .5rem 1rem;
+            border-radius: .5rem;
+            text-transform: uppercase;
+            background-color: white;
+            color: $color--primery-black;
+            user-select: none;
+            cursor: pointer;
+        }
+
+    }
+}
+
+.shoppingCard {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: .325rem;
+    height: 6rem;
+    animation: cardMoveUp .4s;
+    width: 100%;
+
+    &-imageContainer {
+        position: relative;
+        height: 5rem;
+        width: 4rem;
+        background-color: white;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &_price {
+            position: absolute;
+            top: -.325rem;
+            right: -1rem;
+            font-size: .825rem;
+            border-radius: .5rem;
+            font-weight: 500;
+            color: $color--primery-black;
+            padding: .2rem;
+            background-color: $color--primery-yellow;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 80%;
+        }
+    }
+
+    &-text {
+        max-width: 40%;
+
+        &_name {
+            color: white;
+            font-weight: 600;
+            font-size: 1.2rem;
+            padding: .5rem;
+        }
+
+        &_des {
+            color: white;
+            font-size: .825rem;
+            padding: .5rem;
+
+        }
+    }
+
+    &-action {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &_num {
+            padding: 0 1rem;
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: white;
+        }
+
+        &_btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2rem;
+            height: 2rem;
+            font-size: 1.35rem;
+            font-weight: 700;
+            border: 1px solid rgba(255, 255, 255, 0.438);
+            transition: all .2s;
+            cursor: pointer;
+
+            &.yellow {
+                background-color: $color--primery-yellow;
+                border-radius: 0 .5rem .5rem 0;
+
+                &:hover {
+                    filter: brightness(110%);
+                }
+            }
+
+            &.black {
+                background-color: $color--primery-black;
+                border-radius: .5rem 0 0 .5rem;
+                color: white;
+
+                &:hover {
+                    filter: brightness(110%);
+                }
+            }
+        }
+
+        &_delete {
+            padding: .5rem;
+            margin-left: 1.25rem;
+            border-radius: 50%;
+            display: flex;
+            align-self: center;
+            justify-content: center;
+            transition: all .2s;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba($color: $color--primery-red, $alpha: .2);
+
+                svg {
+                    fill: red;
+                }
+            }
+
+            svg {
+                fill: $color--primery-red;
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+    }
+}
+
+@keyframes cardMoveUp {
+    0% {
+        transform: translate(0, 30px);
+    }
+
+    100% {
+        transform: translate(0, 0px);
+
+    }
+}

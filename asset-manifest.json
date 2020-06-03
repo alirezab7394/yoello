@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/yoello/static/css/main.c032afef.chunk.css",
+    "main.js": "/yoello/static/js/main.728c3433.chunk.js",
+    "main.js.map": "/yoello/static/js/main.728c3433.chunk.js.map",
+    "runtime-main.js": "/yoello/static/js/runtime-main.10c452cf.js",
+    "runtime-main.js.map": "/yoello/static/js/runtime-main.10c452cf.js.map",
+    "static/js/2.08820225.chunk.js": "/yoello/static/js/2.08820225.chunk.js",
+    "static/js/2.08820225.chunk.js.map": "/yoello/static/js/2.08820225.chunk.js.map",
+    "index.html": "/yoello/index.html",
+    "precache-manifest.c3e18d48867455f7c9ee807992462aa5.js": "/yoello/precache-manifest.c3e18d48867455f7c9ee807992462aa5.js",
+    "service-worker.js": "/yoello/service-worker.js",
+    "static/css/main.c032afef.chunk.css.map": "/yoello/static/css/main.c032afef.chunk.css.map",
+    "static/js/2.08820225.chunk.js.LICENSE.txt": "/yoello/static/js/2.08820225.chunk.js.LICENSE.txt",
+    "static/media/cart.64ca5b5a.svg": "/yoello/static/media/cart.64ca5b5a.svg",
+    "static/media/coffee.23a33f9b.svg": "/yoello/static/media/coffee.23a33f9b.svg",
+    "static/media/delete.665926e2.svg": "/yoello/static/media/delete.665926e2.svg",
+    "static/media/discout.7ba705fd.svg": "/yoello/static/media/discout.7ba705fd.svg",
+    "static/media/search.c4127766.svg": "/yoello/static/media/search.c4127766.svg",
+    "static/media/spoon-knife.44dbaa78.svg": "/yoello/static/media/spoon-knife.44dbaa78.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.10c452cf.js",
+    "static/js/2.08820225.chunk.js",
+    "static/css/main.c032afef.chunk.css",
+    "static/js/main.728c3433.chunk.js"
+  ]
+}
